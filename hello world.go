@@ -2,8 +2,11 @@ package main
 
 import "fmt"
 
-//cant use :=
+//cant use :=, not visible outside of the package
 var thing string = "some letters have been added"
+
+//can be used outside the package because capital letter
+var I int = 420
 
 func main() {
 	//standard hello world using vars that are declared differently
