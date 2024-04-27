@@ -27,5 +27,12 @@ func main() {
 	fmt.Println(int32(someNumbers))
 	
 	fmt.Printf("%v,  %T\n", aye, aye)
+	
+	//real and imaginary components to the imaginary numbers
+	fmt.Printf("%v,  %T\n", real(aye), real(aye))
+	fmt.Printf("%v,  %T\n", imag(aye), imag(aye))
 
+	//creating an imaginary number
+	var n complex128 = complex(5,12)
+	fmt.Printf("%v,  %T\n", n, n)
 }
