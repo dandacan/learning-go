@@ -18,7 +18,8 @@ func main() {
 	//printing the strings
 	fmt.Println(hi + world)
 	fmt.Println(thing)
-	
+
+	//type conversion loses data sometimes
 	fmt.Println(someNumbers)
 	fmt.Println(int32(someNumbers))
 
