@@ -13,6 +13,7 @@ var someNumbers float32 = 420.69
 //complex numbers exist
 var aye complex64 = 2i
 
+//rune type = UTF-32 char
 func main() {
 	//standard hello world using vars that are declared differently
 	var hi string = "hello"
