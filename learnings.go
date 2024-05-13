@@ -14,6 +14,17 @@ var someNumbers float32 = 420.69
 var aye complex64 = 2i
 
 //rune type = UTF-32 char
+
+//constants are unchangeable values that behave like vars but can't be changed
+const theMeaningOfLife = 42
+
+const(
+	//ignore the first value here
+	_ = iota
+	number = 1 + iota //1 + 1 = 2
+	anotherNumber // auto assigned 3
+
+)
 func main() {
 	//standard hello world using vars that are declared differently
 	var hi string = "hello"
@@ -36,4 +47,6 @@ func main() {
 	//creating an imaginary number
 	var n complex128 = complex(5,12)
 	fmt.Printf("%v,  %T\n", n, n)
+
+	fmt.Printf("%v, %v", number, anotherNumber)
 }
