@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 //cant use :=, not visible outside of the package
 var thing string = "some letters have been added"
@@ -23,7 +25,12 @@ const(
 	_ = iota
 	number = 1 + iota //1 + 1 = 2
 	anotherNumber // auto assigned 3
-
+)
+//efficiently store a list of booleans together
+const(
+	aBooleanValue = 1 << iota
+	anotherBooleanValue
+	aThirdBooleanValue
 )
 func main() {
 	//standard hello world using vars that are declared differently
@@ -48,5 +55,9 @@ func main() {
 	var n complex128 = complex(5,12)
 	fmt.Printf("%v,  %T\n", n, n)
 
-	fmt.Printf("%v, %v", number, anotherNumber)
+	fmt.Printf("%v, %v\n", number, anotherNumber)
+
+	//access merge the booleans that were lumped together on lines 30-34 
+	var booleans byte = aBooleanValue | anotherBooleanValue | aThirdBooleanValue
+	fmt.Printf("%b\n", booleans)
 }
